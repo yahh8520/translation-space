@@ -4,6 +4,24 @@
 
 日常翻译使用内置公共服务，无需填写密钥；需要更多表达方式时，可以连接自己的 OpenAI 兼容 AI 服务。
 
+## 界面预览
+
+以下为 macOS 客户端测试环境的运行截图，使用演示文本，不包含个人翻译引擎配置或密钥。
+
+### 翻译引擎配置
+
+首次启动进入配置页，可管理普通翻译和 AI 引擎，并选择默认服务。
+
+<img src="docs/images/settings.png" alt="translation-space 翻译引擎配置页" width="920" />
+
+### 标准卡片与迷你卡片
+
+标准卡片提供完整操作；迷你卡片保留基础输入、译文和复制，可随时切换。
+
+| 标准翻译卡片 | 迷你翻译卡片 |
+| --- | --- |
+| <img src="docs/images/standard-card.png" alt="标准卡片中的中英翻译示例" width="360" /> | <img src="docs/images/compact-card.png" alt="约 300×150 的迷你翻译卡片" width="300" /> |
+
 ## 功能介绍
 
 | 功能 | 说明 |
@@ -29,6 +47,17 @@
 | Windows | x64 | `.exe`，NSIS 安装程序 |
 
 当前版本为 **0.2.0**，使用 Electron 构建。安装包体积优化暂缓，当前版本不以 30–60 MB 为交付指标。
+
+## 下载安装
+
+在 [GitHub Release](https://github.com/yahh8520/translation-space/releases/tag/v0.2.0) 下载对应平台的安装包：
+
+| 平台 | 0.2.0 安装包 |
+| --- | --- |
+| macOS Apple Silicon | [下载 DMG](https://github.com/yahh8520/translation-space/releases/download/v0.2.0/translation-space-0.2.0-mac-arm64.dmg) |
+| Windows x64 | [下载安装程序](https://github.com/yahh8520/translation-space/releases/download/v0.2.0/translation-space-0.2.0-win-x64.exe) |
+
+当前安装包未签名，macOS 尚未公证，系统可能显示安全提示。发布页同时提供 SHA-256 校验文件。
 
 ## 开始使用
 
