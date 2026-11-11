@@ -1,0 +1,27 @@
+node_modules/
+dist/
+dist-electron/
+release/
+.DS_Store
+.env*
+!.env.example
+.test-artifacts/
+.skill-workspace/
+docs/plans/
+*.log
+
+# 本机引擎配置、凭据和开发环境不进入版本库。
+config.json
+config.json.*
+*.local.json
+secrets*.json
+credentials*.json
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.netrc
+.idea/
+.vscode/
+user-data/
