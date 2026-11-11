@@ -39,7 +39,15 @@ jobs:
       - name: 核心与配置回归
         run: npm test
       - name: 构建安装包
-        run: npm run ${{ matrix.command }}
+        shell: bash
+        run: |
+          # 未配置的 Secret 会展开为空字符串，不能让打包器将其解释为证书路径。
+          for key in CSC_LINK CSC_KEY_PASSWORD APPLE_ID APPLE_APP_SPECIFIC_PASSWORD APPLE_TEAM_ID; do
+            if [ -z "${!key}" ]; then
+              unset "$key"
+            fi
+          done
+          npm run "${{ matrix.command }}"
         env:
           CSC_LINK: ${{ secrets.CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
